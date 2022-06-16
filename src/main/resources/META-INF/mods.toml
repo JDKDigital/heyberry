@@ -1,0 +1,24 @@
+modLoader="javafml" #mandatory
+loaderVersion="[40,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+[[mods]] #mandatory
+    modId="heyberryshutup" #mandatory
+    version="${file.jarVersion}" #mandatory
+    displayName="Hey Berry! SHUT UP" #mandatory
+    credits="me" #optional
+    authors="LobsterJonn" #optional
+    description='''
+Villagers no longer take damage from berry bushes and neither will you if you wear some leg and foot protection. Berry bush thorns are not armor piercing, stop the fake news. Villager AI is pretty dumb though, which is why they should not be allowed to go kill themselves on berries.
+'''
+[[dependencies.heyberryshutup]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[40,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.heyberryshutup]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
