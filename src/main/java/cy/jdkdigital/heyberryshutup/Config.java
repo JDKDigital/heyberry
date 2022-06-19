@@ -21,11 +21,11 @@ public class Config {
 
             disableVillagerDamage = builder
                     .comment("Villagers should not take damage when walking in berry bushes.")
-                    .define("disableVillagerDamage", true);
+                    .define("disableVillagerDamage", false);
 
             disableDamageWhenArmored = builder
                     .comment("Wearing boots and leggings prevent players from taking damage in berry bushes")
-                    .define("disableDamageWhenArmored", true);
+                    .define("disableDamageWhenArmored", false);
 
             builder.pop();
         }
