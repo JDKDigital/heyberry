@@ -71,6 +71,8 @@ minecraft {
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
             property 'forge.enabledGameTestNamespaces', 'heyberryshutup'
+            
+            arg "-mixin.config=heyberryshutup.mixin.json"
 
             mods {
                 heyberryshutup {
@@ -141,7 +143,7 @@ dependencies {
 }
 
 mixin {
-    add sourceSets.main, "jumpboat.refmap.json"
+    add sourceSets.main, "heyberryshutup.refmap.json"
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -154,7 +156,10 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "heyberryshutup",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
+                "TweakOrder": 0,
+                "MixinConfigs" : "heyberryshutup.mixin.json"
         ])
     }
 }
