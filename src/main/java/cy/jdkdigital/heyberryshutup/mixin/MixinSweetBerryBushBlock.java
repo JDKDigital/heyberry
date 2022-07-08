@@ -1,7 +1,6 @@
 package cy.jdkdigital.heyberryshutup.mixin;
 
 import cy.jdkdigital.heyberryshutup.Config;
-import cy.jdkdigital.heyberryshutup.HeyBerry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -18,7 +17,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = SweetBerryBushBlock.class)
 public class MixinSweetBerryBushBlock {
-
     @Inject(
             at = {@At("HEAD")},
             method = {"entityInside(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/Entity;)V"},
