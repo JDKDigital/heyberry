@@ -1,3 +1,8 @@
+1.19-0.2.0.2
+
+-- Added config to disable berry damage for all
+
+
 1.19-0.2.0.1
 
 -- Fixed for servers

@@ -23,7 +23,7 @@ public class MixinSweetBerryBushBlock {
             cancellable = true
     )
     public void entityInside(BlockState blockState, Level level, BlockPos pos, Entity entity, CallbackInfo callbackInfo) {
-        if ((Config.COMMON.disableVillagerDamage.get() && entity instanceof AbstractVillager) || (Config.COMMON.disableDamageWhenArmored.get() && entity instanceof LivingEntity && !((LivingEntity)entity).getItemBySlot(EquipmentSlot.LEGS).isEmpty() && !((LivingEntity)entity).getItemBySlot(EquipmentSlot.FEET).isEmpty())) {
+        if (Config.COMMON.disableBerryDamage.get() || (Config.COMMON.disableVillagerDamage.get() && entity instanceof AbstractVillager) || (Config.COMMON.disableDamageWhenArmored.get() && entity instanceof LivingEntity && !((LivingEntity)entity).getItemBySlot(EquipmentSlot.LEGS).isEmpty() && !((LivingEntity)entity).getItemBySlot(EquipmentSlot.FEET).isEmpty())) {
             entity.makeStuckInBlock(blockState, new Vec3(0.8F, 0.75D, 0.8F));
             callbackInfo.cancel();
         }

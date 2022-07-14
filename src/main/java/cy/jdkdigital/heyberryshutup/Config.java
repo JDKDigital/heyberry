@@ -15,6 +15,7 @@ public class Config {
     {
         public final ForgeConfigSpec.BooleanValue disableVillagerDamage;
         public final ForgeConfigSpec.BooleanValue disableDamageWhenArmored;
+        public final ForgeConfigSpec.BooleanValue disableBerryDamage;
 
         public Common(ForgeConfigSpec.Builder builder) {
             builder.push("Common");
@@ -26,6 +27,10 @@ public class Config {
             disableDamageWhenArmored = builder
                     .comment("Wearing boots and leggings prevent players from taking damage in berry bushes")
                     .define("disableDamageWhenArmored", true);
+
+            disableBerryDamage = builder
+                    .comment("Disable berry damage for all entities. If set to true, the other configs do not matter.")
+                    .define("disableBerryDamage", false);
 
             builder.pop();
         }
