@@ -1,3 +1,13 @@
+1.18.2-0.1.0.2
+
+-- Added config to disable berry damage for all
+
+
+1.18.2-0.1.0.1
+
+-- Working on servers
+
+
 1.18.2-0.1.0.0
 
 -- Initial release
