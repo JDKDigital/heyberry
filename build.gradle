@@ -18,7 +18,6 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 
-
 version = "${version}"
 group = 'cy.jdkdigital.heyberryshutup' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'heyberryshutup'
