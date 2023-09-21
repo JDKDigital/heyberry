@@ -1,18 +1,8 @@
-1.19-0.2.0.3
+1.20.0-2.0.4
 
--- Updated to Forge 41.0.98
-
-
-1.19-0.2.0.2
-
--- Added config to disable berry damage for all
+- Add support for cactus blocks
 
 
-1.19-0.2.0.1
+1.20.0-2.0.3
 
--- Fixed for servers
-
-
-1.19-0.2.0.0
-
--- Port to 1.19
+- Ported to 1.20

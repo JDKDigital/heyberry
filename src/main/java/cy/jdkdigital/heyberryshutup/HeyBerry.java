@@ -1,6 +1,10 @@
 package cy.jdkdigital.heyberryshutup;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -18,5 +22,15 @@ public class HeyBerry
     public HeyBerry()
     {
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.CONFIG);
+    }
+
+    public static boolean shouldStopDamage(boolean disabledInConfig, Entity entity) {
+        return
+                disabledInConfig ||
+                        (Config.COMMON.disableVillagerDamage.get() && entity instanceof AbstractVillager) ||
+                        (Config.COMMON.disableDamageWhenArmored.get() &&
+                                entity instanceof LivingEntity &&
+                                !((LivingEntity)entity).getItemBySlot(EquipmentSlot.LEGS).isEmpty() &&
+                                !((LivingEntity)entity).getItemBySlot(EquipmentSlot.FEET).isEmpty());
     }
 }
